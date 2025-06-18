@@ -356,14 +356,14 @@ ul {
   }
   .info-block__img {
     margin: 20px;
-    margin-left: 230px;
+    margin-left: 320px;
     align-items: center;
   }
   .info-block__text {
     font-size: 24px;
   }
   .list-item__link{
-    margin-left: 130px;
+    margin-left: 200px;
   }
   .list-item__link:hover {
     color: #D9C09D; 
@@ -417,6 +417,61 @@ ul {
   }
   .list-item__link{
     font-size: 28px;
+    margin-right: 200px;
   }
 }
+
+.carousel {
+  padding: 60px 20px;
+  text-align: center;
+  
+}
+
+.carousel .carousel__title {
+  font-size: 60px;
+  color: #F6A2B9;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.carousel .center img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: 0 auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.carousel .center img:hover {
+  transform: scale(1.05);
+}
+
+.slick-prev {
+  left: 10px !important;
+  background-image: url('img/flecha-izquierda.svg');
+}
+
+.slick-next {
+  right: 10px !important;
+}
+
+.slick-prev, .slick-next {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  color: rgb(0, 0, 0);
+  width: 40px;
+  height: 40px;
+  z-index: 1000;
+  font-size: 0;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+
+
+
 
