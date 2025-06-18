@@ -22,12 +22,43 @@ document.addEventListener("DOMContentLoaded", function () {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
-        observer.unobserve(entry.target); // Solo animar una vez
+        observer.unobserve(entry.target); 
       }
     });
   }, {
-    threshold: 0.2 // Ajusta esto según el efecto deseado
+    threshold: 0.2 
   });
 
   menuItems.forEach(item => observer.observe(item));
+});
+
+$(document).ready(function(){
+  $('.center').slick({
+    centerMode: true,
+    centerPadding: '20px',
+    slidesToShow: 3,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '20px',
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
 });
